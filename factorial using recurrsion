@@ -1,0 +1,24 @@
+#include<stdio.h>
+long double fact(int);
+int main()
+{
+long double n,res;
+printf("enter the value");
+scanf("%Lf",&n);
+res = fact(n);
+printf("%Lf",res);
+return 0;
+}
+long double  fact(int n)
+{
+int rem,s=0;
+if(n==0)
+{
+return 1;
+}
+else
+{
+
+return (n*fact(n/10));
+}
+}
