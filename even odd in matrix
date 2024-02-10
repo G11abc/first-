@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,m,n,a[10][10],k=0,p=0,e[10],o[10];
+    printf("enter");
+    scanf("%d%d",&m,&n);
+   
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+   for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            if(a[i][j]%2==0)
+{
+e[p]=a[i][j];
+p++;
+}
+else{
+o[k]=a[i][j];
+k++;
+}
+        }
+    }
+for(i=0;i<p;i++){
+       
+            printf("%d\n",e[i]);
+        
+    }
+for(i=0;i<k;i++){
+       
+            printf("%d",o[i]);
+        
+    }
+
+
+    return 0;
+}
