@@ -6,7 +6,7 @@ char s[10];
 int i=0,l=0;
 puts("enter the string");
 fgets(s,10,stdin);
-while(s[i]!=0){
+while(s[i]!='\0'){
 i++;
 l++;
 }
