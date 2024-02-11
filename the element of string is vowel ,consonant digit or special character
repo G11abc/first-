@@ -6,11 +6,24 @@ char s[20];
 int i=0,l=0;
 puts("enter the string");
 fgets(s,20,stdin);
-while(s[i]!=0){
-i++;
-l++;
-}
+l=strlen(s);
 l=l-1;
-printf("%d",l);
+for(i=0;i<=l;i++){
+if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')) {
+            if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' ||s[i] == 'u' ||
+                s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U') {
+               printf("%c is a vowel.\n",s[i]);
+            } else {
+                printf("%c is a consonant.\n",s[i]);
+            }
+        } else if (s[i] >= '0' && s[i] <= '9') {
+            printf("%c is a digit.\n", s[i]);
+        } else {
+            printf("%c is a special character.\n", s[i]);
+        }
+}
+
+
+
 return 0;
 }
