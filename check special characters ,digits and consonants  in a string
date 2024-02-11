@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char s[20];
+int i=0,l=0,c=0,sc=0,d=0;
+puts("enter the string");
+fgets(s,20,stdin);
+l=strlen(s);
+l=l-1;
+for(i=0;i<=l;i++){
+if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')) {
+            if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' ||s[i] == 'u' ||
+                s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U') {
+               printf("%c is a vowel.\n",s[i]);
+            } else {
+                printf("%c is a consonant.\n",s[i]);
+                c++;
+            }
+        } else if (s[i] >= '0' && s[i] <= '9') {
+            printf("%c is a digit.\n", s[i]);
+            d++;
+        } else {
+            printf("%c is a special character.\n", s[i]);
+            sc++;
+        }
+}
+if(c!=0)
+printf("%d consonants",c);
+else
+printf("no consonants");
+if(sc!=0)
+printf("%d special character ",sc);
+else
+printf("no special character");
+if(d!=0)
+printf("%d digits ",d);
+else
+printf("no digits");
+
+
+
+
+return 0;
+}
